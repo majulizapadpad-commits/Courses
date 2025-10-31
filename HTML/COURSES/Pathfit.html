@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFit - Clierishza</title>
+    <link rel="stylesheet" href="../../CSS/shared.css">
+    <link rel="stylesheet" href="../../CSS/course-detail.css">
+    <script src="../../JS/shared.js"></script>
+</head>
+<body>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <div class="course-header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="course-header-title">COURSE PAGES</h1>
+        </div>
+
+        <div class="container">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-images">
+                        <div class="image-grid">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="PathFit Activity 1">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="PathFit Activity 2">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="PathFit Activity 3">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="PathFit Activity 4">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2>ABOUT THE SUBJECT</h2>
+                        <p>PathFit (Physical Activities Towards Health and Fitness) promotes physical wellness through various sports and fitness activities. The course emphasizes the importance of regular exercise and healthy lifestyle choices.</p>
+                        <p>Students engage in different physical activities, learn about nutrition, and develop personal fitness plans to maintain lifelong health and wellness habits.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section class="media-section">
+                <div class="media-tabs">
+                    <button class="tab-btn active" onclick="showTab('photos')">PHOTOS</button>
+                    <button class="tab-btn" onclick="showTab('videos')">VIDEOS</button>
+                </div>
+                <div class="media-content">
+                    <div id="photos" class="tab-content active">
+                        <div class="photo-gallery">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="PathFit Class 1">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="PathFit Class 2">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="PathFit Class 3">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="PathFit Class 4">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="PathFit Class 5">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="PathFit Class 6">
+                        </div>
+                    </div>
+                    <div id="videos" class="tab-content">
+                        <div class="video-gallery">
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Fitness Training Sessions</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Sports Activities</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Health & Wellness Tips</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2>OUR EXPERIENCE</h2>
+                <div class="experience-cards">
+                    <div class="experience-card">
+                        <h3>CLERISH'S</h3>
+                        <p>PathFit made me realize the importance of staying active. Prof. Cruz's energetic approach to fitness motivated me to adopt a healthier lifestyle. The variety of activities kept every class exciting and engaging.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>JULIZA'S</h3>
+                        <p>This course changed my relationship with exercise completely. Learning about proper nutrition and fitness techniques helped me develop sustainable healthy habits that I continue to practice today.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

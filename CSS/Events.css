@@ -1,0 +1,199 @@
+/* Events-specific styles - extends shared.css */
+
+/* Custom Image Slider */
+.custom-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.custom-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-slide {
+    min-width: 100%;
+    user-select: none;
+    position: relative;
+}
+
+.custom-slide img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+}
+
+.custom-caption {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: clamp(28px, 5vw, 45px);
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-transform: lowercase;
+    letter-spacing: -1px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.button .a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.button .a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* Navigation Buttons */
+.custom-prev, 
+.custom-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10;
+    font-size: 20px;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-prev:hover, 
+.custom-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.custom-prev { 
+    left: 20px; 
+}
+
+.custom-next { 
+    right: 20px; 
+}
+
+/* Dots Navigation */
+.custom-dots {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 20px 20px;
+}
+
+.custom-dot {
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+    margin: 0 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-dot.active,
+.custom-dot:hover {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .custom-slider {
+        margin: 20px;
+        max-width: none;
+    }
+    
+    .custom-slide img {
+        height: 350px;
+    }
+    
+    .custom-caption {
+        bottom: 60px;
+        font-size: clamp(20px, 6vw, 32px);
+    }
+    
+    .custom-prev, 
+    .custom-next {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+        padding: 10px;
+    }
+    
+    .custom-prev { 
+        left: 10px; 
+    }
+    
+    .custom-next { 
+        right: 10px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-slide img {
+        height: 280px;
+    }
+    
+    .custom-caption {
+        bottom: 50px;
+        padding: 0 20px;
+    }
+    
+    .button .a {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+    
+    .custom-prev, 
+    .custom-next {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

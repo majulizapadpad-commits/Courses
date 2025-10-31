@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purposive Communication - Clierishza</title>
+    <link rel="stylesheet" href="../../CSS/shared.css">
+    <link rel="stylesheet" href="../../CSS/course-detail.css">
+    <script src="../../JS/shared.js"></script>
+</head>
+<body>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <div class="course-header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="course-header-title">COURSE PAGES</h1>
+        </div>
+
+        <div class="container">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-images">
+                        <div class="image-grid">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Web Dev Lab 1">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Web Dev Lab 2">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Web Dev Lab 3">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Web Dev Lab 4">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2>ABOUT THE SUBJECT</h2>
+                        <p>Purposive Communication develops students' ability to communicate effectively in various contexts using different modes and strategies. The course emphasizes critical thinking, cultural sensitivity, and ethical communication practices.</p>
+                        <p>Students learn to create clear, coherent, and compelling messages across different media platforms while considering audience, purpose, and context in their communication endeavors.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section class="media-section">
+                <div class="media-tabs">
+                    <button class="tab-btn active" onclick="showTab('photos')">PHOTOS</button>
+                    <button class="tab-btn" onclick="showTab('videos')">VIDEOS</button>
+                </div>
+                <div class="media-content">
+                    <div id="photos" class="tab-content active">
+                        <div class="photo-gallery">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Web Dev Class 1">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Web Dev Class 2">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Web Dev Class 3">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Web Dev Class 4">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Web Dev Class 5">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Web Dev Class 6">
+                        </div>
+                    </div>
+                    <div id="videos" class="tab-content">
+                        <div class="video-gallery">
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Communication Strategies</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Public Speaking Techniques</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Student Presentations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2>OUR EXPERIENCE</h2>
+                <div class="experience-cards">
+                    <div class="experience-card">
+                        <h3>CLERISH'S</h3>
+                        <p>Purposive Communication helped me become a more confident speaker and writer. Prof. Santos taught us how to express our ideas clearly and persuasively. The presentation skills I learned are invaluable.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>JULIZA'S</h3>
+                        <p>This course transformed how I communicate in both academic and personal settings. Learning about different communication strategies and cultural sensitivity made me a better communicator overall.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSTP - Clierishza</title>
+    <link rel="stylesheet" href="../../CSS/shared.css">
+    <link rel="stylesheet" href="../../CSS/course-detail.css">
+    <script src="../../JS/shared.js"></script>
+</head>
+<body>
+  
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <div class="course-header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="course-header-title">COURSE PAGES</h1>
+        </div>
+
+        <div class="container">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-images">
+                        <div class="image-grid">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="NSTP Activity 1">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="NSTP Activity 2">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="NSTP Activity 3">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="NSTP Activity 4">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2>ABOUT THE SUBJECT</h2>
+                        <p>National Service Training Program (NSTP) develops students' civic consciousness and commitment to community service. The program aims to enhance social responsibility and promote national unity through various community-based activities.</p>
+                        <p>Students participate in community outreach programs, environmental projects, and social awareness campaigns that contribute to nation-building and character development.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section class="media-section">
+                <div class="media-tabs">
+                    <button class="tab-btn active" onclick="showTab('photos')">PHOTOS</button>
+                    <button class="tab-btn" onclick="showTab('videos')">VIDEOS</button>
+                </div>
+                <div class="media-content">
+                    <div id="photos" class="tab-content active">
+                        <div class="photo-gallery">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="NSTP Community Service 1">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="NSTP Community Service 2">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="NSTP Community Service 3">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="NSTP Community Service 4">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="NSTP Community Service 5">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="NSTP Community Service 6">
+                        </div>
+                    </div>
+                    <div id="videos" class="tab-content">
+                        <div class="video-gallery">
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Community Outreach Programs</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Environmental Projects</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Social Awareness Campaigns</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2>OUR EXPERIENCE</h2>
+                <div class="experience-cards">
+                    <div class="experience-card">
+                        <h3>CLERISH'S</h3>
+                        <p>NSTP opened my eyes to the needs of our community. Prof. Garcia guided us through meaningful service projects that made a real difference. The experience taught me the value of giving back to society.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>JULIZA'S</h3>
+                        <p>Participating in community service through NSTP was incredibly fulfilling. Working with local organizations and helping others made me more aware of social issues and inspired me to continue volunteering.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

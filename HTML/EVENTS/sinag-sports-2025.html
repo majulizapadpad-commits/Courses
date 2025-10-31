@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinag Sports 2025 - Clierishza</title>
+    <link rel="stylesheet" href="../../CSS/shared.css">
+    <link rel="stylesheet" href="../../CSS/event-detail.css">
+    <script src="../../JS/shared.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-links">
+            <a href="../Homepage.html" class="nav-link">HOME</a>
+            <a href="../NAV BAR/Course.html" class="nav-link">COURSES</a>
+            <a href="../NAV BAR/Event.html" class="nav-link active">EVENTS</a>
+            <a href="../NAV BAR/About-us.html" class="nav-link">ABOUT</a>
+            <a href="../NAV BAR/Contact.html" class="nav-link">CONTACT</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="event-main">
+        <!-- Hero Section with Background -->
+        <div class="event-hero">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="event-title">SINAG SPORTS 2025</h1>
+        </div>
+
+        <!-- Media Section -->
+        <section class="event-media-section">
+            <div class="media-tabs">
+                <button class="tab-btn active" onclick="showTab('photos')">PHOTOS</button>
+                <button class="tab-btn" onclick="showTab('videos')">VIDEOS</button>
+            </div>
+            
+            <div class="media-content">
+                <div id="photos" class="tab-content active">
+                    <div class="photo-gallery">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 1">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 2">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 3">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 4">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 5">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 6">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 7">
+                        <img src="../../PICTURES/Sinagtamaraw/10102514.jpg" alt="Sinag Sports Photo 8">
+                    </div>
+                </div>
+                
+                <div id="videos" class="tab-content">
+                    <div class="video-gallery">
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Opening Ceremony</p>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Basketball Finals</p>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Volleyball Championship</p>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Track and Field Events</p>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Closing Ceremony</p>
+                        </div>
+                        <div class="video-placeholder">
+                            <div class="play-icon">▶</div>
+                            <p>Event Highlights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>

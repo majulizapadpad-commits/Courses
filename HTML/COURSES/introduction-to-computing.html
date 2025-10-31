@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to Computing - Clierishza</title>
+    <link rel="stylesheet" href="../../CSS/shared.css">
+    <link rel="stylesheet" href="../../CSS/course-detail.css">
+    <script src="../../JS/shared.js"></script>
+</head>
+<body>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Section -->
+        <div class="course-header">
+            <button class="back-btn" onclick="history.back()">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M19 12H5M12 19L5 12L12 5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <h1 class="course-header-title">COURSE PAGES</h1>
+        </div>
+
+        <div class="container">
+            <!-- About Section -->
+            <section class="about-section">
+                <div class="about-content">
+                    <div class="about-images">
+                        <div class="image-grid">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Computing Lab 1">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Computing Lab 2">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Computing Lab 3">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Computing Lab 4">
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <h2>ABOUT THE SUBJECT</h2>
+                        <p>Introduction to Computing provides students with fundamental knowledge of computer systems, programming concepts, and digital literacy. This course covers basic programming principles, computer hardware, software applications, and problem-solving techniques using computational thinking.</p>
+                        <p>Students will learn essential skills in algorithm development, data representation, and basic programming languages while exploring the role of computing in modern society.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Media Section -->
+            <section class="media-section">
+                <div class="media-tabs">
+                    <button class="tab-btn active" onclick="showTab('photos')">PHOTOS</button>
+                    <button class="tab-btn" onclick="showTab('videos')">VIDEOS</button>
+                </div>
+                <div class="media-content">
+                    <div id="photos" class="tab-content active">
+                        <div class="photo-gallery">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Class Photo 1">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Class Photo 2">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Class Photo 3">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Class Photo 4">
+                            <img src="../../PICTURES/Courses/1.jpg" alt="Class Photo 5">
+                            <img src="../../PICTURES/Courses/2.jpg" alt="Class Photo 6">
+                        </div>
+                    </div>
+                    <div id="videos" class="tab-content">
+                        <div class="video-gallery">
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Course Introduction Video</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Programming Basics</p>
+                            </div>
+                            <div class="video-placeholder">
+                                <div class="play-icon">▶</div>
+                                <p>Student Projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2>OUR EXPERIENCE</h2>
+                <div class="experience-cards">
+                    <div class="experience-card">
+                        <h3>CLERISH'S</h3>
+                        <p>This course opened my eyes to the world of programming. Prof. Manubay's teaching style made complex concepts easy to understand. The hands-on projects helped me build confidence in coding and problem-solving.</p>
+                    </div>
+                    <div class="experience-card">
+                        <h3>JULIZA'S</h3>
+                        <p>Introduction to Computing was the perfect starting point for my tech journey. The course structure was well-organized, and the practical exercises made learning enjoyable. I now feel prepared for advanced programming courses.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Remove active class from all buttons
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            tabBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab content
+            document.getElementById(tabName).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
